@@ -3,27 +3,26 @@
 using namespace std;
 
 bool IsMagicNumber(unsigned int input) {
-  int i = 2;
-  while (i < input) {
+  // if input is not divisible by i, it is a magic #. i increases until the value is one less than input
+  for (unsigned int i = 2; i < input; i++) {
     if (input % i == 0) {
       return false;
     }
-    i++
   }
   return true;
 }
 
 
 int main() {
-  bool magic_number = true;
+  bool not_divisible_by_i = true;
   int streak = 0;
-  while (magic_number) {
+  while (not_divisible_by_i) {
     unsigned int input;
     cout << "Enter a positive integer: ";
     cin >> input;
 
-    magic_number = IsMagicNumber(input);
-    if (magic_number) {
+    not_divisible_by_i = IsMagicNumber(input);
+    if (not_divisible_by_i) {
       cout << "Yes! " << input << " is a magic number!" << endl;
       streak++;
     } else {

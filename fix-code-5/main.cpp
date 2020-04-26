@@ -3,11 +3,12 @@
 using namespace std;
 
 int Factorial(int value) {
-    int result = 0;
-    for (int i = 0; i < value i++) {
-        result = i;
+    int result = value;
+    int one_less_value = value - 1; 
+    for (int i = one_less_value; i >= 1; i--) {
+        result = result * i;
     }
-    return result
+    return result;
 }
 
 int main() {
