@@ -3,9 +3,10 @@
 using namespace std;
 
 int main() {
-  for (int i = 0; i < 12; i++) {
-    cout << "Learning to code is fun.";
-  }
+  for (int j = 0; j < 12; j++) {
+    cout << "Learning to code is fun."<< endl;
+  } 
+  int i = j;
   cout << "I used loops to print out (Learning code is fun) " << i << " times.";
   return 0;
 }
