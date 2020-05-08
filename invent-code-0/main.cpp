@@ -3,14 +3,24 @@
 using namespace std;
 
 void PrintFibonacci (unsigned int length) {
-  if (length < 4) {
-    cout << "0 1 1 ";
-  }
+  unsigned int result_2 = 1;
+  unsigned int result_1 = 0;
+
   for (unsigned int output = 1; output <= length; output++ ){
-    unsigned result = output + 1;
-    cout << "0 1 1 " <<result << " ";
-      //for (unsigned int output = 1; output <= length; output+= output){
-      //cout << output << " ";
+    if (output == 1) {
+      cout << result_1 << " ";
+      output++;
+    }
+    if (output == 2 && length > 1) {
+      cout << result_2 << " ";
+      output++;
+    }
+    if (output > 2 && length > 2) {
+      int result = result_1 + result_2;
+      cout << result << " ";
+    result_1 = result_2;
+    result_2 = result;
+    }
   }
 }
 

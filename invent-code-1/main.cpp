@@ -3,12 +3,12 @@
 using namespace std;
 
 bool IsMagicNumber(unsigned int input) {
-  int i = 2;
+  unsigned int i = 2;
   while (i < input) {
     if (input % i == 0) {
       return false;
     }
-    i++
+    i++;
   }
   return true;
 }
