@@ -5,12 +5,22 @@ using namespace std;
 // Adds all even numbers between low and high, and returns the sum. Does not include high, but does include low.
 int SumOfEvenNumbers(int low, int high) {
     int sum = 0;
-    for (int i = low; i > high; i++) {
-      if (i % 2 )
+    for (int i = low; i < high; i++) {
+      if (i % 2 == 0 ) {
         sum += i;
-        return sum;
+      }
     }
     return sum;
+}
+
+void PrintNumberEquation(int low, int high) {
+  for (int i = low; i < high; i++) {
+    if (i % 2 == 0 && i == (high - 2)) {
+      cout << i << " = ";
+    } else if (i % 2 == 0) {
+      cout << i << " + ";
+    }
+  }
 }
 
 int main() {
@@ -25,6 +35,6 @@ int main() {
     int even_sum = SumOfEvenNumbers(bottom, top);
 
     // Do update this section based on what numbers are entered by the user.
-    cout << "10 + 12 + 14 + 16" << " = ";
+    PrintNumberEquation(bottom, top);
     cout << even_sum << endl;
 }
