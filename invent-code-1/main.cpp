@@ -3,17 +3,16 @@
 using namespace std;
 
 bool IsMagicNumber(unsigned int input) {
-  //unsigned int i = 2;
-  for (unsigned int i = 2; i < input; i++) {
+  unsigned int i = 2;
+  while (i < input) {
     if (input % i == 0) {
       return false;
     }
-    else {
-      return true;
-    }
-    //i++;
+    i++;
   }
+  return true;
 }
+
 
 int main() {
   bool magic_number = true;
