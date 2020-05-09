@@ -28,7 +28,7 @@ int main() {
     int top; // = 18;    // Make this a user input.
     cout << "Enter a number: ";
     cin >> bottom;
-    cout << "Enter another number: ";
+    cout << "Enter a number higher than previous number: ";
     cin >> top;
 
     // for 10 and 18, this should return 52.

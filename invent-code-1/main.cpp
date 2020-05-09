@@ -2,13 +2,19 @@
 #include <string>
 using namespace std;
 
-bool IsMagicNumber(unsigned int input) {
-  int i = 2;
-  while (i < input) {
+bool OddPrimeNumber(unsigned int input) {
+//  unsigned int i = 2;
+//  while (i < input) {
+//    if (input % i == 0) {
+//     return false;
+//   }
+//    i++;
+//  }
+
+  for (unsigned int i = 2; i < input; i++) {
     if (input % i == 0) {
       return false;
     }
-    i++
   }
   return true;
 }
@@ -22,14 +28,14 @@ int main() {
     cout << "Enter a positive integer: ";
     cin >> input;
 
-    magic_number = IsMagicNumber(input);
+    magic_number = OddPrimeNumber(input);
     if (magic_number) {
       cout << "Yes! " << input << " is a magic number!" << endl;
       streak++;
     } else {
       cout << "Aww! " << input << " is not a magic number!" << endl;
     }
-  }
+  } 
 
   cout << "Your streak is: " << streak << endl;
   if (streak == 0) {
