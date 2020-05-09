@@ -3,9 +3,12 @@
 using namespace std;
 
 int main() {
-  for (int i = 0; i < 12; i++) {
-    cout << "Learning to code is fun.";
+  int number;
+  cout << "Enter a number: ";
+  cin >> number;
+  for (int i = 0; i < number; i++) {
+    cout << "Learning to code is fun." << endl;
   }
-  cout << "I used loops to print out (Learning code is fun) " << i << " times.";
+  cout << "I used loops to print out (Learning code is fun) " << number << " times." << endl;
   return 0;
 }
