@@ -28,7 +28,7 @@ int main() {
     cout << "Enter a positive integer: ";
     cin >> input;
 
-    magic_number = OddPrimeNumber(input);
+    magic_number = PrimeNumber(input);
     if (magic_number) {
       cout << "Yes! " << input << " is a magic number!" << endl;
       streak++;
