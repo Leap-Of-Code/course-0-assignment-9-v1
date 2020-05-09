@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-bool OddPrimeNumber(unsigned int input) {
+bool PrimeNumber(unsigned int input) {
 //  unsigned int i = 2;
 //  while (i < input) {
 //    if (input % i == 0) {
