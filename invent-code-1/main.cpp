@@ -2,28 +2,22 @@
 #include <string>
 using namespace std;
 
-bool IsMagicNumber(unsigned int input) {
-  int i = 2;
-  while (i < input) {
-    if (input % i == 0) {
-      return false;
+bool IsPrimeNumber(unsigned int input) {
+  for (unsigned int i = 2; i < input && input % i == 0; i++) {
+    return false;
     }
-    i++
-  }
   return true;
 }
 
-
 int main() {
-  bool magic_number = true;
   int streak = 0;
-  while (magic_number) {
+  for (bool prime_number = true; prime_number == true;) {
     unsigned int input;
     cout << "Enter a positive integer: ";
     cin >> input;
 
-    magic_number = IsMagicNumber(input);
-    if (magic_number) {
+    prime_number = IsPrimeNumber(input);
+    if (prime_number) {
       cout << "Yes! " << input << " is a magic number!" << endl;
       streak++;
     } else {

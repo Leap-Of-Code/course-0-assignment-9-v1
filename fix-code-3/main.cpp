@@ -4,9 +4,10 @@ using namespace std;
 
 int main() {
   // This code prints out all the even numbers from 0 to 100 inclusively.
-  for (int counter = 0; counter < 100; counter++) {
+  for (int counter = 0; counter <= 100; counter++) {
+    if (counter % 2 == 0) {
     cout << "Counter: " << counter << endl;
-    counter = 50;
+    }
   }
   return 0;
 }
