@@ -4,10 +4,10 @@ using namespace std;
 
 int Factorial(int value) {
     int result = 0;
-    for (int i = 0; i < value i++) {
+    for (int i = 0; i < value; i++) {
         result = i;
     }
-    return result
+    return result;
 }
 
 int main() {
