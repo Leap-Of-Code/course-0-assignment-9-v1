@@ -2,13 +2,11 @@
 #include <string>
 using namespace std;
 
-bool IsMagicNumber(unsigned int input) {
-  int i = 2;
-  while (i < input) {
+bool IsMagicNumber(int input) {
+  for (int i = 2; i < input; i++) {
     if (input % i == 0) {
       return false;
     }
-    i++
   }
   return true;
 }

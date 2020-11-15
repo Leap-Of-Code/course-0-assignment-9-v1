@@ -2,12 +2,15 @@
 #include <string>
 using namespace std;
 
-int Factorial(int value) {
-    int result = 0;
-    for (int i = 0; i < value i++) {
-        result = i;
-    }
-    return result
+int Factorial(int number) {
+  int temp = number;
+
+  for (int i = 0; i <= number - 1; i++) {
+    temp *= number - 1;
+    number = number - 1; 
+  }
+  
+  return temp;
 }
 
 int main() {
@@ -27,4 +30,9 @@ int main() {
     cout << "The factorial of 13 is " << Factorial(13) << endl;
     cout << "The factorial of 14 is " << Factorial(14) << endl;
     cout << "The factorial of 15 is " << Factorial(15) << endl;
+
+    return 0;
 }
+
+  
+
